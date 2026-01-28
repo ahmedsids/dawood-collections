@@ -128,7 +128,7 @@ footer span{color:var(--gold);}
 </footer>
 
 <script>
-// Hamburger toggle
+// toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 hamburger.addEventListener('click', ()=>{ navMenu.classList.toggle('show'); });
@@ -144,13 +144,21 @@ const productsData = [
   {id:7, name:"Elegant King Cotton Collection", size:"King Size · Cotton", img:"pro7.jfif", oldPrice:2000, price:1700, category:"king cotton"},
   {id:8, name:"Modern King Printed Style", size:"King Size · Printed", img:"pro8.jfif", oldPrice:2000, price:1700, category:"king printed"},
   {id:9, name:"Royal Cotton King Set", size:"King Size · Cotton", img:"pro9.jfif", oldPrice:2000, price:1700, category:"king cotton"},
-  {id:10, name:"Designer King Printed Sheet", size:"King Size · Printed", img:"pro10.jfif", oldPrice:2000, price:1700, category:"king printed"}
+  {id:10, name:"Designer King Printed Sheet", size:"King Size · Printed", img:"pro10.jfif", oldPrice:2000, price:1700, category:"king printed"},
+ {id:11, name:"Luxury Floral Bedsheet", size:"King Size · Premium", img:"pro11.png", oldPrice:2500, price:2100, category:"king printed"},
+  {id:12, name:"Luxury Leave print Bedsheet", size:"King Size · Premium", img:"p.jpeg", oldPrice:2500, price:2100, category:"king printed"},
+{ id:13, name:"Modren Printed Bedsheet", size:"King Size · Premium", img:"product.jpegy", oldPrice:2500, price:2100, category:"king printed"},
+ { id:14, name:"Luxury Printed Bedsheet", size:"King Size · Premium", img:"pro.jpeg", oldPrice:2500, price:2100, category:"king printed"},
+ 
+
+
+  
 ];
 
 // Cart array
 let cart = [];
 
-// Render products
+// Render product
 function renderProducts(products){
   const grid = document.getElementById('productGrid');
   grid.innerHTML = "";
@@ -194,7 +202,7 @@ document.querySelectorAll('.add-cart-btn').forEach(btn=>{
 
 }
 
-// Initial render
+// Init render
 renderProducts(productsData);
 
 // Filter buttons
